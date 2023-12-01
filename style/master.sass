@@ -1,0 +1,598 @@
+\:root
+	font-size: 0.750em
+
+*
+	@include font(1rem, 300, #000)
+	font-weight: 400
+	box-sizing: border-box
+	-webkit-text-size-adjust: none
+	-webkit-text-decoration: none !important
+	text-decoration-skip: ink
+	text-decoration: none
+	list-style-type: none
+	margin: 0
+	padding: 0
+	-webkit-transition: all 0.15s ease-in
+	-moz-transition: all 0.15s ease-in
+	-o-transition: all 0.15s ease-in
+	transition: all 0.15s ease-in
+	input, textarea, button
+		resize: none
+		// @extend.basic-box
+	&:focus
+		outline-color: #ffffff
+		outline: none
+
+html
+	-ms-overflow-style: -ms-autohiding-scrollbar
+	-webkit-text-size-adjust: 100%
+	-ms-text-size-adjust: 100%
+	-moz-osx-font-smoothing: grayscale
+	-webkit-font-smoothing: antialiased
+
+body
+	// margin-right: 0
+	overflow-x: hidden
+
+.contentWrapper
+	margin: 0 12%
+
+.w-100
+	display: none
+
+.w-200
+	width: 100% !important
+
+.row
+	margin: 0 !important
+
+header
+	.navbar
+		z-index: 9999
+		width: 100%
+		padding: 10px 12%
+		background-color: rgba(255,255,255,.65)
+		// background: -webkit-gradient(linear, left top, left bottom, from(rgba(255,255,255,0.4)), to(transparent))
+    	// background: linear-gradient(to bottom, rgba(255,255,255,0.4), transparent)
+		position: fixed !important
+		#navigation
+			margin: 0 auto
+		.navbar-nav
+			margin: 0 auto
+			.nav-link
+				@include fontRoboto(1.5rem, 500, #133200 !important)
+				text-transform: uppercase
+				transition: all .25s ease-out
+				border-bottom: 2px solid transparent
+				margin-top: 35px
+				width: 100%
+				transition: all 100ms ease-in
+				padding: 0 15px
+				&:hover
+					color: $wb_green !important
+					border-color: $wb_green
+					font-weight: bold
+			.navbar-brand
+				margin: 0 20px
+				padding: 0
+		img, #main-logo
+			height: 80px
+			// margin: 0 40px
+	.r-header
+		position: fixed
+		z-index: 999999
+	.header-container
+		position: relative
+		width: 100vw
+		overflow: hidden
+		.hero
+			position: absolute
+			padding: 0 12%
+			width: 100%
+			height: 108vh
+			background: linear-gradient(to bottom, rgba(19, 49, 0, .4), rgba(0,0,0,0.6))
+			z-index: 2
+			h1
+				@include font(5rem, 900, #fff)
+				text-transform: uppercase
+				margin-top: 50vh
+			p
+				@include font(2rem, 300, #fff)
+				width: 100%
+				max-width: 800px
+				text-transform: uppercase
+			button
+				@extend .mainButton
+				margin-top: 3%
+				padding: 15px 40px
+		.video-container
+			width: 120vw
+			overflow: hidden
+			height: 108vh
+			overflow-x: hidden
+			margin-top: -50px
+			.header-ytplayer 
+				// width: 1920px
+				// height: 1080px
+				border: none
+			video
+				position: fixed
+				min-width: 125vw
+				margin-top: -15px
+				// width: 200vw
+				// margin-top: 250px
+				top: 10%
+				left: 0%
+				transform: translate(-5%,0%)
+				overflow-x: hidden
+				z-index: 1
+
+// JS Navigation Height Increaser.	
+.resize-navbar
+	min-height: 0 !important
+	height: 60px !important
+	.resize-logo
+		height: 50px !important
+	.resize-nav-link
+		margin-top: 14px !important
+		font-size: 1.4rem !important
+	.resize-burger
+		top: 10px !important
+
+.resize-animation
+	will-change: transform
+	transition: transform 1.25s ease-out
+
+	// .navbar
+	// 	min-height: 0 !important
+	// 	height: 100px !important
+	// 	#main-logo
+	// 		height: 85px !important
+	// 	.nav-link
+	// 		margin-top: 30px !important
+	// 		font-size: 1.4rem !important
+	// .burger
+	// 	top: 36px !important
+				
+
+// .scrollBG
+// 	transition: all 500ms ease-out
+// 	background-color: rgba(0, 0, 0, 0.5) !important
+
+// Start of main content part.
+
+.typography-headline
+	@include font(5rem, 100, $wb_green)
+	color: #fff !important
+	padding: 4.15% 0
+	margin: 0
+	background-color: transparent !important
+
+.fixed_bg
+	background: url("../assets/images/backgrounds/w_flower_2.jpg")
+	background-attachment: fixed
+   	background-repeat: no-repeat
+	background-size: cover
+  	width: 100%
+
+main
+	position: relative
+	z-index: 999
+
+#overview
+	// padding: 11.15% 12%
+	// padding: 2% 12%
+	// background-color: rgba(255,255,255,.85)
+	h1
+		padding: 4.3% 12%
+	.container
+		min-width: 100% !important
+		padding: 0 !important
+	.col-sm
+		transition: all 125ms ease-out
+		text-align: center
+		padding: 30px
+		// margin: 10px 20px
+    	background-repeat: no-repeat
+		background-position: 48% 100%
+		background-size: cover
+		margin: 10px
+		border-radius: 15px
+		min-height: 600px
+		&:hover
+			background-color: rgba(255,255,255,.85)
+			box-shadow: 0 30px 50px rgba(0, 0, 0, .20)
+			text-align: center
+		svg
+			width: 100%
+			margin-top: 10px
+			max-width: 100px
+			display: inline-block
+		h1
+			@include font(2.5rem, 700, #fff)
+			transition: all 250ms ease
+			padding: 0
+			margin-top: 30px
+			text-shadow: 0 5px 10px rgba(0,0,0,.1)
+			font-family: 'Roboto', sans-serif
+			// font-style: italic
+		p
+			@include font(1.25rem, 400, rgba(0,0,0,0))
+			text-align: center
+			// padding: 0 40px 0 0
+			transition: all 250ms ease
+			margin: 10px 0 0 0
+			b
+				@include font(1.25rem, 700, transparent)
+			i
+				@include font(1.25rem, 400, transparent)
+				font-style: italic
+	// .decrease-icon-size
+	// 	svg
+	// 		padding: 16px
+	// 		padding-left: 0
+	.one-bg
+		background-image: url("../assets/images/overview/low_res/01.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/01.jpg")
+	.two-bg
+		background-image: url("../assets/images/overview/low_res/02.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/02.jpg")
+	.three-bg
+		background-image: url("../assets/images/overview/low_res/03.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/03.jpg")
+		background-position: 20% 100% !important																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															Q
+	.four-bg
+		background-image: url("../assets/images/overview/low_res/04.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/04.jpg")
+	.five-bg
+		background-image: url("../assets/images/overview/low_res/05.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/05.jpg")
+	.six-bg
+		background-image: url("../assets/images/overview/low_res/06.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/06.jpg")
+	.seven-bg
+		background-image: url("../assets/images/overview/low_res/07.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/07.jpg")
+	.eight-bg
+		background-image: url("../assets/images/overview/low_res/08.jpg")
+		background-image: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url("../assets/images/overview/low_res/08.jpg")
+	
+// #commitment
+// 	width: 100vw
+// 	// background: linear-gradient(to bottom, rgba(0, 0, 0, .45), rgba(19, 49, 0, 35)), url('../assets/images/^/weed-leaf.jpg')
+// 	// background: linear-gradient(to bottom, rgba(0, 0, 0, .2), rgba(19, 49, 0, .6)), url('../assets/images/about/weed-leaf.jpg')
+// 	background-attachment: fixed
+//     background-position: center
+//     background-repeat: no-repeat
+//     background-size: cover
+// 	margin-top: -5px
+// 	height: auto
+// 	padding: 8.3% 12% 8.3% 12%
+// 	// max-height: 75vh
+// 	h1
+// 		@include font(5rem, 300, $wb_green)
+// 		max-width: 1000px
+// 		padding: 4.15% 0
+// 		&::after
+// 			content: url("../assets/images/icons/commitment/down-arrow.png")
+// 			width: 20px
+// 			margin-left: 20px
+// 	.about-text
+// 		display: none
+// 		-webkit-transition: opacit 0.15s ease-in
+// 		-moz-transition: all 0.15s ease-in
+// 		-o-transition: all 0.15s ease-in
+// 		transition: all 0.15s ease-in
+// 		p, h2, b
+// 			@include font(2rem, 300, $wb_green)
+// 		h2, b
+// 			font-weight: 700
+
+#products
+	// padding: 11.15% 12%
+	padding: 0
+	background-color: rgba(255,255,255,0)
+	box-shadow: 0 40px 50px rgba(0,0,0, .3)
+	h1
+		padding: 4.3% 12%
+		text-shadow: 0 5px 10px rgba(0,0,0, .1)
+	.container
+		min-width: 100% !important
+		padding: 0 !important
+		.col-sm
+			padding: 20px
+			margin: 20px
+			border-radius: 15px
+			// margin: 20px 10px
+			// margin: 0 20px
+			background-size: cover
+			background-position: center
+			position: relative
+			min-heigth: 500px
+			&:hover
+				box-shadow: 0 0px 30px rgba(0, 0, 0, .3)
+			.products-bg
+				// background: linear-gradient(to bottom, rgba(0, 0, 0, .3), rgba(19, 49, 0, .5))
+				// background: linear-gradient(to bottom, transparent, rgba(19, 49, 0, .5))
+				height: 100%
+				padding: 20px 0
+				z-index: 1
+				.p-cbd, .p-hemp, .p-thc
+					// display: none
+				img
+					width: 150px
+					display: block !important
+					margin: 20px auto
+				svg
+					width: 150px
+					display: inline-block
+					margin: 0 10px 15px 0
+				#hemp-leaf
+					width: 80px
+				h1, .title-hover-event
+					@include font(3rem, 700, #fff)
+					width: 100%
+					text-align: center
+				p, .text-hover-event
+					@include font(1.5rem, 400, rgba(0,0,0,0))
+					padding: 20px 0
+					margin: 0 20px
+					text-align: center
+					img
+						width: 150px
+						display: inline-block
+						margin: 0 10px 15px 0
+
+.cbd
+	background-image: url('../assets/images/product/darken/cannabis-capsule.jpg')
+.hemp
+	background-image: url('../assets/images/product/darken/cannabis-seeds.jpg')
+.thc
+	background-image: url('../assets/images/product/darken/cannabis-leaf.jpg')
+
+.product_list
+	.row
+		display: flex
+		.product
+			margin: 4.3% 12%
+			width: 100%
+			display: flex
+			align-items: center
+			background-color: #eeeeee
+			align-items: center
+			padding: 20px
+			border-radius: 15px
+			.col
+				//
+			.product_image
+				max-width: 50%
+				text-align: center
+				padding: 0
+				img
+					width: 100%
+					// box-shadow: 0 0 30px rgba(0,0,0, .2)
+					// border-radius: 15px
+			.product_text
+				display: inline-block
+				text-align: center
+				max-width: 50%
+				padding: 0
+				span
+					vertical-align: middle
+					height: 100%
+				h2
+					font-family: 'Bebas Neue'
+					margin: 20px 0 10px 0
+					font-size: 64px
+					font-weight: bold
+					letter-spacing: 0.1em
+				p
+					font-size: 16px
+				button
+					background-color: $wb_green
+					// background-color: transparent
+					@include font(1rem, 500, #fff)
+					padding: 10px 20px
+					border: 1px solid transparent
+					outline: none
+					border-radius: 5px
+					text-align: center
+					transition: all 500ms ease-out
+					&:hover
+						background-color: transparent
+						border-color: $wb_green
+						color: $wb_green
+
+#partners
+	// background-color: #fafafa
+	background-size: cover
+	color: #fff
+	h1
+		padding: 4.3% 12%
+.container
+	// padding-bottom: 8.3%
+	min-width: 100%
+	position: relative
+	padding: 0
+	.slider
+		text-align: center !important
+		background: rgb(238,238,238);
+		background: linear-gradient(90deg, rgba(238,238,238,0) 0%, rgba(238,238,238,0.34637605042016806) 15%, rgba(238,238,238,0.8477766106442577) 30%, rgba(238,238,238,0.8477766106442577) 70%, rgba(238,238,238,0.3491771708683473) 85%, rgba(238,238,238,0) 100%);
+		padding: 40px
+		margin: 0 20px
+		// background-color: rgba(0,0,0, .5)
+		// box-shadow: 0 0 50px rgba(0,0,0, .35)
+		.slide
+			min-width: 100px !important
+			// a
+			// 	margin: 0 auto
+			img
+				width: auto
+				max-width: 250px
+				max-height: 150px
+				margin: 0 auto
+				padding: 25px
+			#aljaber-fix
+				height: 100px
+		#hervorhebung
+			border-bottom: 2px solid #fff
+			padding-bottom: 10px
+		#gem-art
+			max-width: 150px
+
+#contact
+	background-color: rgba(255,255,255,.85)
+	color: $wb_green
+	h1
+		padding: 4.15% 12%
+	.container
+		min-width: 100%
+		padding: 0
+		padding: 4.15% 12%
+		// margin: 4.3% 0
+		.row
+			flex-wrap: 0
+			.col
+				display: flex
+				flex-basis: 0
+				width: 75%
+				align-items: center;
+				address
+					h4
+						@include font(2.5rem, 300, $wb_green)
+					#contact_under_umbrella
+						@include font(1.25rem !important, 300, $wb_green)
+						font-style: italic !important
+						text-decoration: none !important
+						text-transform: uppercase
+					p
+						@include font(1.5rem, 300, $wb_green)
+						#contact_headline
+							@include font(2rem, 300, $wb_green)
+						#contact_cr-number
+							@include font(1rem, 400, $wb_green)
+					a
+						@include font(1.5rem, 300, $wb_green)
+						// .fa_icon_green
+						// 	margin-right: 3px
+						// 	color: $wb_green
+				.iframe-map
+					width: 120%
+					// height: 500px
+					border: none
+#contact-form
+	// display: none
+	color: #eee
+	padding: 4.15% 12%
+	margin: 0
+	max-width: 100%
+	padding: 4.15% 12%
+	.row
+		min-width: 100%
+		#send
+			background-color: $wb_green
+			// background-color: transparent
+			@include font(1rem, 500, #fff)
+			padding: 10px 20px
+			border: 1px solid transparent
+			// border: 1px solid #F49131
+			outline: none
+			border-radius: 5px
+			text-align: left
+			float: left
+			margin-left: 20px
+			transition: all 500ms ease-out
+			&:hover
+				background-color: transparent
+				border-color: $wb_green
+				color: $wb_green
+		.col
+			padding: 40px 20px !important
+			width: 100%
+			#message
+				height: 200px
+				max-height: 400px
+			input
+				@include font(1rem, 400, $wb_green)
+				background-color: transparent
+				border: none
+				border-bottom: 1px solid $wb_green
+				padding: 0 0 20px 0
+				width: 100%
+			::-webkit-input-placeholder
+				color: $wb_green
+			::-moz-placeholder
+				color: $wb_green
+			:-ms-input-placeholder
+				color: $wb_green
+			:-moz-placeholder
+				color: $wb_green
+
+
+#contact-info
+	padding: 40px 0px
+	.container
+		width: 100%
+		padding: 0
+	.col-sm
+		padding: 0
+    	min-width: 200px
+		width: 100%
+		p
+			@include font(1rem, 500, #fff)
+			display: inline-block
+			padding-right: 40px
+
+#copyright
+	padding: 0 12%
+	.row
+		padding: 40px 0
+		p
+			@include font(10px, 400, #fff)
+			text-decoration: none !important
+			// text-transform: uppercase
+			margin: 0
+		.col-sm
+			padding: 20px 0
+			a    
+				min-width: 120px
+				p
+					@include font(10px, 400, #fff)
+					text-decoration: none !important
+					&:hover
+						font-weight: bold
+						text-decoration: underline
+			margin: 0 auto
+			#umbrella-text
+				font-size: 10px !important
+			a
+				@include font(14px, 400, #fff)
+				#fu
+					width: 150px
+					margin: -32px 10px -23.5px 10px
+			
+
+#privacy_policy
+	background-color: rgba(238,238,238, .925)
+	color: $wb_green
+	padding: 8.3% 12%
+	display: none
+	h1
+		@include font(5rem, 300, $wb_green)
+		padding: 0
+	.container
+		min-width: 100%
+		padding: 0
+		h1
+			@include font(3rem, 600, #000)
+		h2
+			@include font(2rem, 600, #000)
+		p, b
+			@include font(1.25rem, 400, #000)
+		b
+			font-weight: bold
+			display: contents
+			flex-direction: row-reverse
+
+.ytp-show-cards-title
+	display: none !important

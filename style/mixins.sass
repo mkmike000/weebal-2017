@@ -1,0 +1,23 @@
+/// Helper to size an element
+// @mixin size($width, $height)
+// 	width: $width
+// 	height: $height
+
+/// Helper for Font-Size
+@mixin font($size: false, $weight: false, $color: false)
+	font-family: 'Roboto', sans-serif
+	@if $size
+		font-size: $size
+	@if $weight
+		font-weight: $weight
+	@if $color
+		color: $color
+
+@mixin fontRoboto($size: false, $weight: false, $color: false)
+	font-family: 'Roboto Condensed', sans-serif
+	@if $size
+		font-size: $size
+	@if $weight
+		font-weight: $weight
+	@if $color
+		color: $color
